@@ -1,0 +1,32 @@
+body {
+  background: $dark-gray;
+  font-family: $body-font;
+  color: $white;
+}
+
+.nav-menu {
+	font-family: $heading-font;
+	color: $white;
+	font-weight: 700;
+
+	ul {
+		list-style: none;		
+
+		li {
+			a {
+				color: $white;
+				text-decoration: none;
+
+				&:hover,
+	      &:active {
+	        text-decoration: none;
+	        color: $red;
+	      }
+
+	      &.active-link {
+	      	color: $red;
+	      }
+			}
+		}
+	}
+}

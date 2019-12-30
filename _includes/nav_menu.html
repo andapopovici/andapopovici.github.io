@@ -1,11 +1,13 @@
+{% assign current = page.url | downcase | split: '/' %}
+
 <aside>
 	<div class="container">
-		<nav>
+		<nav class="nav-menu">
 			<ul>
-				<li><a href="{{ '/' | relative_url }}">Home</li>
-				<li><a href="{{ '/portfolio' }}">Portfolio</a></li>
-				<li><a href="{{ '/about' }}">About</a></li>
-				<li><a href="{{ '/blog' }}">Blog</a></li>	
+				<li><a href="{{ '/' | relative_url }}" {% if current[1] == nil %}class='active-link'{% endif %}>HOME</li>
+				<li><a href="{{ '/portfolio' }}" {% if current[1] == 'portfolio' %}class='active-link'{% endif %}>PORTFOLIO</a></li>
+				<li><a href="{{ '/about' }}" {% if current[1] == 'about' %}class='active-link'{% endif %}>ABOUT</a></li>
+				<li><a href="{{ '/blog' }}" {% if current[1] == 'blog' %}class='active-link'{% endif %}>BLOG</a></li>	
 			</ul>			
 		</nav>
 	</div>
