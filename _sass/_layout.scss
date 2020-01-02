@@ -1,18 +1,29 @@
 body {
-  background: $dark-gray;
   font-family: $body-font;
   color: $white;
+  background: $dark-gray;
+}
+
+.top {
+	padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
 }
 
 .nav-menu {
 	font-family: $heading-font;
+	font-weight: 400;
 	color: $white;
-	font-weight: 700;
+	position: absolute;
+	right: 100px;
 
 	ul {
 		list-style: none;		
 
 		li {
+			display: inline;
+			padding:20px;
+
 			a {
 				color: $white;
 				text-decoration: none;
@@ -27,6 +38,27 @@ body {
 	      	color: $red;
 	      }
 			}
+		}
+	}
+}
+
+.header {
+	min-height: 100vh;
+
+	.title {
+		font-family: $heading-font;
+		font-size: 3rem;
+		color: $green;
+		margin-top: 200px;
+	}
+
+	.subtitle {
+		font-size: 1.7rem;
+		color: white;
+		width: 65%;
+		
+		p {
+			font-weight: 300;
 		}
 	}
 }
