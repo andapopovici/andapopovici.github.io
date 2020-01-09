@@ -4,18 +4,37 @@ body {
   background: $dark-gray;
 }
 
+.grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+}
+
 .top {
+	grid-column: span 12;
 	padding-left: 100px;
   padding-right: 100px;
-  padding-top: 20px;
+	padding-top: 20px;
+	border: 1px solid white;
+}
+
+.content {
+	grid-column: span 12;
+	border: 1px solid white;
+}
+
+footer {
+	border: 1px solid white;
+	grid-column: span 12;
 }
 
 .nav-menu {
 	font-family: $heading-font;
 	font-weight: 400;
 	color: $white;
-	position: absolute;
-	right: 100px;
+	//position: absolute;
+	//right: 100px;
+	border: 1px solid white;
 
 	ul {
 		list-style: none;		
@@ -43,8 +62,6 @@ body {
 }
 
 .header {
-	min-height: 100vh;
-
 	.title {
 		font-family: $heading-font;
 		font-size: 3rem;
@@ -60,5 +77,15 @@ body {
 		p {
 			font-weight: 300;
 		}
+	}
+}
+
+@media (max-width: 767px) {
+	.grid {
+		display: block;
+	}
+
+	.box {
+		margin: 10px 0;
 	}
 }
