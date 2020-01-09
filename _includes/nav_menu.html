@@ -1,14 +1,15 @@
 {% assign current = page.url | downcase | split: '/' %}
 
-<aside>
-	<div class="container">
-		<nav class="nav-menu">
-			<ul>
-				<li><a href="{{ '/' | relative_url }}" {% if current[1] == nil %}class='active-link'{% endif %}>HOME</li>
-				<li><a href="{{ '/portfolio' }}" {% if current[1] == 'portfolio' %}class='active-link'{% endif %}>PORTFOLIO</a></li>
-				<li><a href="{{ '/about' }}" {% if current[1] == 'about' %}class='active-link'{% endif %}>ABOUT</a></li>
-				<li><a href="{{ '/blog' }}" {% if current[1] == 'blog' %}class='active-link'{% endif %}>BLOG</a></li>	
-			</ul>			
-		</nav>
-	</div>
+<div class="logo">
+	<img src="/assets/logo.svg" alt="Anda Popovici personal logo">
+</div>
+<aside class="nav-menu-container">
+	<nav class="nav-menu">
+		<ul>
+			<li><a href="{{ '/' | relative_url }}" {% if current[1] == nil %}class='active-link'{% endif %}>HOME</li>
+			<li><a href="{{ '/portfolio' }}" {% if current[1] == 'portfolio' %}class='active-link'{% endif %}>PORTFOLIO</a></li>
+			<li><a href="{{ '/about' }}" {% if current[1] == 'about' %}class='active-link'{% endif %}>ABOUT</a></li>
+			<li><a href="{{ '/blog' }}" {% if current[1] == 'blog' %}class='active-link'{% endif %}>BLOG</a></li>	
+		</ul>			
+	</nav>
 </aside>

@@ -1,21 +1,14 @@
 body {
   font-family: $body-font;
   color: $white;
-  background: $dark-gray;
+	background: $dark-gray;
+	padding: 20px 100px;
 }
 
 .grid {
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.top {
-	grid-column: span 12;
-	padding-left: 100px;
-  padding-right: 100px;
-	padding-top: 20px;
-	border: 1px solid white;
+  grid-template-rows: auto;
+	grid-template-columns: repeat(12, 1fr);
 }
 
 .content {
@@ -26,6 +19,13 @@ body {
 footer {
 	border: 1px solid white;
 	grid-column: span 12;
+}
+
+.logo {
+	grid-column: span 1;
+}
+aside.nav-menu-container {
+	grid-column: span 11;
 }
 
 .nav-menu {
@@ -62,6 +62,9 @@ footer {
 }
 
 .header {
+	grid-column: span 12;
+	height: calc(100vh - 10px);
+	
 	.title {
 		font-family: $heading-font;
 		font-size: 3rem;
