@@ -1,3 +1,24 @@
+html {
+  font-size: 16px;
+}
+@media (max-width: 900px) {
+  html { font-size: 14px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 12px; }
+}
+
+/* Type will scale with document */
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+
 body {
   font-family: $body-font;
   color: $white;
@@ -13,11 +34,9 @@ body {
 
 .content {
 	grid-column: span 12;
-	border: 1px solid white;
 }
 
 footer {
-	border: 1px solid white;
 	grid-column: span 12;
 }
 
@@ -30,11 +49,10 @@ aside.nav-menu-container {
 
 .nav-menu {
 	font-family: $heading-font;
-	font-weight: 400;
+	font-weight: 500;
 	color: $white;
-	//position: absolute;
-	//right: 100px;
-	border: 1px solid white;
+	position: absolute;
+	right: 100px;
 
 	ul {
 		list-style: none;		
@@ -61,21 +79,34 @@ aside.nav-menu-container {
 	}
 }
 
+h1 {
+	font-family: $heading-font;
+	color: $green;
+}
+
+h2 {
+	color: $green;
+	font-family: $heading-font;
+}
+
+h3 {
+	color: $green;
+	font-family: $heading-font;
+}
+
 .header {
 	grid-column: span 12;
 	height: calc(100vh - 10px);
 	
-	.title {
-		font-family: $heading-font;
-		font-size: 3rem;
-		color: $green;
+	.title h1 {
+		font-size: 6rem;
 		margin-top: 200px;
 	}
 
 	.subtitle {
 		font-size: 1.7rem;
-		color: white;
-		width: 65%;
+		color: $white;
+		width: 45rem;
 		
 		p {
 			font-weight: 300;
@@ -91,4 +122,27 @@ aside.nav-menu-container {
 	.box {
 		margin: 10px 0;
 	}
+
+	.title h1 {
+		font-size: 3rem;
+	};
+}
+
+.portfolio-preview {
+	grid-column: span 6;
+	margin: 20px 20px 20px 0;
+
+	img {
+		width: 100%;
+		min-width: 360px;
+	}
+
+	p { 
+		text-align: center;
+		font-size: 1.2rem;
+	}
+}
+
+.recent-work {
+	grid-column: span 12;
 }
