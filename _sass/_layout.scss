@@ -1,11 +1,19 @@
 html {
-  font-size: 16px;
+	font-size: 16px;
+	scroll-behavior: smooth;
 }
+
 @media (max-width: 900px) {
   html { font-size: 14px; }
 }
 @media (max-width: 400px) {
-  html { font-size: 12px; }
+  html { 
+		font-size: 12px; 
+
+		body {
+			padding: 0.5rem;
+		}
+	}
 }
 
 /* Type will scale with document */
@@ -42,7 +50,13 @@ footer {
 
 .logo {
 	grid-column: span 1;
+	margin-top: 1rem;
+
+	img {
+		height: 2rem;
+	}
 }
+
 aside.nav-menu-container {
 	grid-column: span 11;
 }
@@ -72,7 +86,7 @@ aside.nav-menu-container {
 	      }
 
 	      &.active-link {
-	      	color: $red;
+					color: $red;
 	      }
 			}
 		}
@@ -100,7 +114,7 @@ h3 {
 	
 	.title h1 {
 		font-size: 6rem;
-		margin-top: 200px;
+		margin-top: 12rem;
 	}
 
 	.subtitle {
@@ -111,6 +125,16 @@ h3 {
 		p {
 			font-weight: 300;
 		}
+	}
+}
+
+.arrow {
+	position: absolute;
+	top: calc(100vh - 60px);
+	left: 50%;
+
+	img {
+		height: 20px;
 	}
 }
 
@@ -128,9 +152,9 @@ h3 {
 	};
 }
 
-.portfolio-preview {
-	grid-column: span 6;
-	margin: 20px 20px 20px 0;
+.portfolio-card {
+	grid-column: span 4;
+	margin: 0px 60px 20px 0;
 
 	img {
 		width: 100%;
@@ -140,6 +164,16 @@ h3 {
 	p { 
 		text-align: center;
 		font-size: 1.2rem;
+	}
+
+	.no-top-margin {
+		margin-top: 0px;
+	}
+
+	.portfolio-card-container {
+		background: $green;
+		color: white;
+		width: 100%;
 	}
 }
 
