@@ -1,14 +1,6 @@
-# Hello, world
+# Posts
 
-Some body text
-## Here I will make a point
+## Hello, world
+_15.05.2022_
 
-And here's some options
-- one
-- two 
-
-Which one works for you?
-
-## And my second point
-
-Still here?
+[Where I say hello 👋 ](/posts/hello)
