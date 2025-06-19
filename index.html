@@ -4,6 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Animal news</title>
+  <style>
+    #skip-to-content {
+      position: fixed;
+      background: blue;
+      color: white;
+      transform: translateY(-10em);
+    }
+
+    #skip-to-content:focus {
+      transform: translateY(0em);
+    }
+  </style>
 </head>
 <body>
   <script>
@@ -19,7 +31,7 @@
     }
   </script>
   <header>
-    <a href="#main">Skip to content</a>
+    <a href="#main" id="skip-to-content">Skip to content</a>
     <button onclick="toggleNav()">Toggle navigation</button>
     <nav id="navigation">
         <ul>
