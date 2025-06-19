@@ -21,19 +21,19 @@
   <script>
     function toggleNav() {
       const navElement = document.getElementById("navigation");
-      const navHidden = navElement.getAttribute("hidden") === "true";
+      const navHidden = navElement.getAttribute("hidden");
 
-      if (navHidden) {
+      if (navHidden === "") {
         navElement.removeAttribute("hidden");
       } else {
-        navElement.setAttribute("hidden", true);
+        navElement.setAttribute("hidden", "");
       }
     }
   </script>
   <header>
     <a href="#main" id="skip-to-content">Skip to content</a>
     <button onclick="toggleNav()">Toggle navigation</button>
-    <nav id="navigation">
+    <nav id="navigation" hidden>
         <ul>
         <li><a href="#" aria-current="page">News</a></li>
         <li><a href="#">Weather</a></li>
