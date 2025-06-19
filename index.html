@@ -20,6 +20,10 @@
 <body>
   <script>
     function toggleNav() {
+      const navTrigger = document.getElementById("navTrigger");
+      const isExpanded = navTrigger.getAttribute("aria-expanded") === "true";
+      navTrigger.setAttribute("aria-expanded", !isExpanded);
+
       const navElement = document.getElementById("navigation");
       const navHidden = navElement.getAttribute("hidden");
 
@@ -32,7 +36,7 @@
   </script>
   <header>
     <a href="#main" id="skip-to-content">Skip to content</a>
-    <button onclick="toggleNav()">Toggle navigation</button>
+    <button onclick="toggleNav()" id="navTrigger" aria-expanded="false">Toggle navigation</button>
     <nav id="navigation" hidden>
         <ul>
         <li><a href="#" aria-current="page">News</a></li>
