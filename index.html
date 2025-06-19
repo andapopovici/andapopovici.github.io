@@ -4,13 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Animal news</title>
-
-  <link rel="stylesheet" href="https://unpkg.com/mvp.css">
 </head>
 <body>
+  <script>
+    function toggleNav() {
+      const navElement = document.getElementById("navigation");
+      const navHidden = navElement.getAttribute("hidden") === "true";
+
+      if (navHidden) {
+        navElement.removeAttribute("hidden");
+      } else {
+        navElement.setAttribute("hidden", true);
+      }
+    }
+  </script>
   <header>
     <a href="#main">Skip to content</a>
-    <nav>
+    <button onclick="toggleNav()">Toggle navigation</button>
+    <nav id="navigation">
         <ul>
         <li><a href="#" aria-current="page">News</a></li>
         <li><a href="#">Weather</a></li>
