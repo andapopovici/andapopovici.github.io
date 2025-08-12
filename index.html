@@ -35,43 +35,67 @@
     }
   </script>
   <header>
-    <a href="#main" id="skip-to-content">Skip to content</a>
-    <button onclick="toggleNav()" id="navTrigger" aria-expanded="false">Toggle navigation</button>
-    <nav id="navigation" hidden>
-        <ul>
-        <li><a href="#" aria-current="page">News</a></li>
-        <li><a href="#">Weather</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#">Settings</a></li>
-        <li><a href="#">Our sponsors</a></li>
-        </ul>
-    </nav>
-    </header>
-    <main id="main">
-      <h1>News</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue vel turpis a hendrerit. Morbi ut scelerisque lorem. Duis interdum imperdiet erat a pulvinar. Proin ac maximus erat. Quisque molestie congue ipsum, ac finibus odio dapibus id. Ut elementum maximus pretium. Vestibulum sem eros, consectetur molestie justo nec, imperdiet gravida ex.</p>
-  
-      <h2><a href="x">Neighbourhood cat rescues squirrel</a></h2>
-      <p>A local ginger cat has done the impossible - made friends with a squirrel and rescued it from a bin.</p>
-    
-      <h2><a href="y">Two otters find love at Edinburgh Zoo</a></h2>
-      <p>Pebbles and Fern, the oldest otters at Edinburgh Zoo, have paired up!</p>
-    </main>
-    <section aria-labelledby="subscribe-heading">
-      <form action="" method="get">
-        <h2 id="subscribe-heading">Subscribe to our newsletter</h2>
-        <div>
-          <label for="email">Enter your email: </label>
-          <input type="email" name="email" id="email" required />
-        </div>
-        <div>
-          <button>Subscribe</button>
-        </div>
-      </form>
-    </section>
-    <footer>
-    Copyright me 2025
-    <a href="yo">Accessibility statement</a>
-  </footer>
+  <a href="#main" id="skip-to-content">Skip to content</a>
+
+  <nav>
+    <button onclick="toggleNav()" id="navTrigger" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Toggle navigation">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <ul id="nav-list" hidden>
+      <li><a href="#" aria-current="page">News</a></li>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Games</a></li>
+      <li>
+        <a href="#">
+          Settings
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+        </a>
+      </li>
+      <li><a href="#">Our sponsors</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <h1>News</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue vel turpis a hendrerit. Morbi ut scelerisque lorem. Duis interdum imperdiet erat a pulvinar. Proin ac maximus erat. Quisque molestie congue ipsum, ac finibus odio dapibus id. Ut elementum maximus pretium. Vestibulum sem eros, consectetur molestie justo nec, imperdiet gravida ex.</p>
+
+  <h2><a href="x">Neighbourhood cat rescues squirrel</a></h2>
+  <p>A local ginger cat has done the impossible - made friends with a squirrel and rescued it from a bin.</p>
+
+  <h2><a href="y">Two otters find love at Edinburgh Zoo</a></h2>
+  <p>Pebbles and Fern, the oldest otters at Edinburgh Zoo, have paired up!</p>
+</main>
+
+<section aria-labelledby="subscribe-heading">
+  <form action="" method="get">
+    <h2 id="subscribe-heading">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      Subscribe to our newsletter
+    </h2>
+    <div>
+      <label for="email">Enter your email: </label>
+      <input type="email" name="email" id="email" required />
+    </div>
+    <div>
+      <button>Subscribe</button>
+    </div>
+  </form>
+</section>
+
+<footer>
+  Copyright me 2025
+  <a href="yo">Accessibility statement</a>
+</footer>
 </body>
 </html>
