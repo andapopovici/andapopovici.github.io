@@ -23,10 +23,10 @@
       const navTrigger = document.getElementById("navTrigger");
       const isExpanded = navTrigger.getAttribute("aria-expanded") === "true";
       navTrigger.setAttribute("aria-expanded", !isExpanded);
-
-      const navElement = document.getElementById("navigation");
+    
+      const navElement = document.getElementById("nav-list");
       const navHidden = navElement.getAttribute("hidden");
-
+    
       if (navHidden === "") {
         navElement.removeAttribute("hidden");
       } else {
